@@ -42,7 +42,9 @@
     justify-content: center;
     flex-direction: column;
     /* margin: 20px 0px; */
+    background-color: #adadad;
 }
+
 .display-container{
     text-align: center;
     color: white;
@@ -51,6 +53,14 @@
 .display-box{
     display: flex;
     justify-content: end;
+    
+}
+.display-container p{
+    background-color: #3c4654;
+    font-size: 21px;
+    text-align: start;
+    padding-bottom: 8px;
+
 }
 
 #display1{
@@ -59,22 +69,23 @@
     text-align: right;
     width: 312px;
     margin: 0px;
+    color: #473e3e
 }
 #operator-sec{
     box-shadow: none;
-    font-size: 30px;
+    font-size: 20px;
     /* text-align: right; */
     width: 65px;
     margin: 0px;
-    color: #6a6d71;
+    color: #473e3e;
 }
 #display3{
     box-shadow: none;
-    font-size: 30px;
+    font-size: 20px;
     text-align: right;
     /* width: 150px; */
     margin: 0px;
-    color: #6a6d71;
+    color: #473e3e;
 }
 
 .display input {
