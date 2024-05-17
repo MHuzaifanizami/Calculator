@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
@@ -28,8 +29,9 @@
                 <div>
                     <input type="button" value="AC" id="delete-all" onclick="(deleteAllFunction())">
                     <input type="button" value="DE" id="delete" onclick="(deleteFunction())">
-                    <input type="button" value="." id="point" onclick="(pointFunction())">
                     <input type="button" value="/" id="divide" onclick="(divideFunction())">
+                    <input type="button" value="/" id="divide" onclick="(divideFunction())">
+                    <i class="fa-solid fa-clock-rotate-left" id="history-icon"></i>
                 </div>
                 <div>
                     <input type="button" value="7" id="seven" onclick="(sevenFunction())">
@@ -53,6 +55,7 @@
                 <div>
                     <input type="button" value="00" id="double-zero" onclick="(doubleZeroFunction())">
                     <input type="button" value="0" id="zero" onclick="(zeroFunction())">
+                    <input type="button" value="." id="point" onclick="(pointFunction())">
                     <input type="button" id="btn" value="=" onclick="myResult()">
 
                 </div>

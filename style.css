@@ -35,6 +35,22 @@
     font-size: 20px;
 }
 
+#history{
+    outline: 0;
+    border: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+#history-icon{
+    position: absolute;
+}
 
 
 .display-container {
@@ -97,5 +113,5 @@
 }
 
 #btn {
-    width: 145px;
+    width: 60px;
 }

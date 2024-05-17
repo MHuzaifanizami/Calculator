@@ -66,13 +66,14 @@ function pointFunction() {
 // Functions for Symbols ********
 
 function subtractFunction() {
+
     operatorSec.value += "-";
     display3.value = display1.value;
     display1.value = "";
     // display3.value = final
     operatorSec.value = "-"
+    }
 
-}
 
 function multiplyFunction() {
     operatorSec.value += "*";
