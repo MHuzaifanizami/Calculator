@@ -20,42 +20,44 @@
                 <div class="display-container">
                     <p>Calculator</p>
                     <div class="display-box">
-                        <input type="text" readonly name="display" id="display3">
+                        <input type="text" readonly name="display" id="previous-number">
                         <input type="text" readonly name="display" id="operator-sec">
                     </div>
-                    <input type="text" readonly name="display" id="display1">
+                    <input type="text" readonly name="display" id="current-number">
                 </div>
 
                 <div>
                     <input type="button" value="AC" id="delete-all" onclick="(deleteAllFunction())">
                     <input type="button" value="DE" id="delete" onclick="(deleteFunction())">
-                    <input type="button" value="/" id="divide" onclick="(divideFunction())">
-                    <input type="button" value="/" id="divide" onclick="(divideFunction())">
-                    <i class="fa-solid fa-clock-rotate-left" id="history-icon"></i>
+                    <input type="button" value="/" id="divide" onclick="operatorFunction('/')">
+                    <div id="icon-box">
+                        <input type="button" style="color: #3a4452;" value="0" id="history-sec">
+                        <i class="fa-solid fa-clock-rotate-left" id="history-icon"></i>
+                    </div>
                 </div>
                 <div>
-                    <input type="button" value="7" id="seven" onclick="(sevenFunction())">
-                    <input type="button" value="8" id="eight" onclick="(eightFunction())">
-                    <input type="button" value="9" id="nine" onclick="(nineFunction())">
-                    <input type="button" value="*" id="multiply" onclick="(multiplyFunction())">
+                    <input type="button" value="7" id="seven" onclick="(getValue('7'))">
+                    <input type="button" value="8" id="eight" onclick="getValue('8')">
+                    <input type="button" value="9" id="nine" onclick="getValue('9')">
+                    <input type="button" value="*" id="multiply" onclick="(operatorFunction('*'))">
                 </div>
                 <div>
-                    <input type="button" value="4" id="four" onclick="(fourFunction())">
-                    <input type="button" value="5" id="five" onclick="(fiveFunction())">
-                    <input type="button" value="6" id="six" onclick="(sixFunction())">
-                    <input type="button" value="-" id="subtract" onclick="(subtractFunction())">
+                    <input type="button" value="4" id="four" onclick="getValue('4')">
+                    <input type="button" value="5" id="five" onclick="getValue('5')">
+                    <input type="button" value="6" id="six" onclick="getValue('6')">
+                    <input type="button" value="-" id="subtract" onclick="operatorFunction('-')">
                 </div>
                 <div>
-                    <input type="button" value="1" id="one" onclick="(oneFunction())">
-                    <input type="button" value="2" id="two" onclick="(twoFunction())">
-                    <input type="button" value="3" id="three" onclick="(threeFunction())">
-                    <input type="button" id="plus" value="+" onclick="plusFunction()">
+                    <input type="button" value="1" id="one" onclick="getValue('1')">
+                    <input type="button" value="2" id="two" onclick="getValue('2')">
+                    <input type="button" value="3" id="three" onclick="getValue('3')">
+                    <input type="button" id="plus" value="+" onclick="operatorFunction('+')">
                 </div>
 
                 <div>
-                    <input type="button" value="00" id="double-zero" onclick="(doubleZeroFunction())">
-                    <input type="button" value="0" id="zero" onclick="(zeroFunction())">
-                    <input type="button" value="." id="point" onclick="(pointFunction())">
+                    <input type="button" value="00" id="double-zero" onclick="getValue('00')">
+                    <input type="button" value="0" id="zero" onclick="(getValue('0'))">
+                    <input type="button" value="." id="point" onclick="(getValue('.'))">
                     <input type="button" id="btn" value="=" onclick="myResult()">
 
                 </div>

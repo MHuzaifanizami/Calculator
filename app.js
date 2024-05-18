@@ -1,139 +1,64 @@
 // Getting From Html *******
-var display1 = document.getElementById("display1");
+var CurrentNumber = document.getElementById("current-number");
 var operatorSec = document.getElementById("operator-sec");
-var display3 = document.getElementById("display3");
+var previousNumber = document.getElementById("previous-number");
 var result = document.getElementById("btn");
-var zero = document.getElementById("zero");
-var doubleZero = document.getElementById("double-zero");
-var one = document.getElementById("one");
-var two = document.getElementById("two");
-var three = document.getElementById("three");
-var four = document.getElementById("four");
-var five = document.getElementById("five");
-var six = document.getElementById("six");
-var seven = document.getElementById("seven");
-var eight = document.getElementById("eight");
-var nine = document.getElementById("nine");
-
-var subtract = document.getElementById("subtract");
-var plus = document.getElementById("plus");
-var multiply = document.getElementById("multiply");
-var divide = document.getElementById("divide");
-var point = document.getElementById("point");
 var deleteAll = document.getElementById("delete-all");
 var delet = document.getElementById("delete");
+var historySec = document.getElementById("history-sec");
 
 
-// Functions for Numbers ********
-function doubleZeroFunction() {
-    display1.value += "00"
-}
-function zeroFunction() {
-    display1.value += "0"
-}
-function oneFunction() {
-    display1.value += "1"
-}
-function twoFunction() {
-    display1.value += "2"
-}
-function threeFunction() {
-    display1.value += "3"
-}
-function fourFunction() {
-    display1.value += "4"
-}
-function fiveFunction() {
-    display1.value += "5"
-}
-function sixFunction() {
-    display1.value += "6"
-}
-function sevenFunction() {
-    display1.value += "7"
-}
-function eightFunction() {
-    display1.value += "8"
-}
-function nineFunction() {
-    display1.value += "9"
-}
-function pointFunction() {
-    display1.value += "."
+
+// getting Value function  *****
+function getValue(val) {
+    var CurrentNumber = document.getElementById("current-number")
+    CurrentNumber.value += val
+    console.log(CurrentNumber.value)
 }
 
-
-// Functions for Symbols ********
-
-function subtractFunction() {
-
-    operatorSec.value += "-";
-    display3.value = display1.value;
-    display1.value = "";
-    // display3.value = final
-    operatorSec.value = "-"
+function operatorFunction(opr) {
+    if (CurrentNumber.value) {
+        operatorSec.value = opr;
+        previousNumber.value = CurrentNumber.value;
+        CurrentNumber.value = "";
+    } else {
+        operatorSec.value = opr;
     }
-
-
-function multiplyFunction() {
-    operatorSec.value += "*";
-    display3.value = display1.value;
-    display1.value = "";
-    // display3.value = final;
-    operatorSec.value = "*";
 }
 
-function divideFunction() {
-    operatorSec.value += "/";
-    display3.value = display1.value;
-    display1.value = "";
-    // display3.value = final
-    operatorSec.value = "/"
-}
-
-function plusFunction() {
-    operatorSec.value += "+";
-    display3.value = display1.value;
-    display1.value = "";
-    // display3.value = final
-    operatorSec.value = "+"
-
-}
+// operator  function *****
 function myResult() {
     var final = ""
     if (operatorSec.value == "+") {
-        var num1 = Number(display3.value);
-        var num2 = Number(display1.value);
+        var num1 = Number(previousNumber.value);
+        var num2 = Number(CurrentNumber.value);
         final = num1 + num2
         operatorSec.value += num2 + "="
-        display1.value = final
-
-
-
+        CurrentNumber.value = final
 
     }
     else if (operatorSec.value == "-") {
-        var num1 = Number(display3.value);
-        var num2 = Number(display1.value);
+        var num1 = Number(previousNumber.value);
+        var num2 = Number(CurrentNumber.value);
         final = num1 - num2
         operatorSec.value += num2 + "="
-        display1.value = final
+        CurrentNumber.value = final
 
     }
     else if (operatorSec.value == "*") {
-        var num1 = Number(display3.value);
-        var num2 = Number(display1.value);
+        var num1 = Number(previousNumber.value);
+        var num2 = Number(CurrentNumber.value);
         final = num1 * num2
         operatorSec.value += num2 + "="
-        display1.value = final
+       CurrentNumber.value = final
 
     }
     else if (operatorSec.value == "/") {
-        var num1 = Number(display3.value);
-        var num2 = Number(display1.value);
+        var num1 = Number(previousNumber.value);
+        var num2 = Number(CurrentNumber.value);
         final = num1 / num2
         operatorSec.value += num2 + "="
-        display1.value = final
+        CurrentNumber.value = final
 
     }
 }
@@ -142,14 +67,14 @@ function myResult() {
 
 // Delete all function ******
 function deleteAllFunction() {
-    display1.value = "";
+    CurrentNumber.value = "";
     operatorSec.value = "";
-    display3.value = "";
+    previousNumber.value = "";
 }
 
 // single delete function ****
 function deleteFunction() {
-    display1.value = display1.value.slice(0, display1.value.length - 1);
+    CurrentNumber.value = CurrentNumber.value.slice(0, CurrentNumber.value.length - 1);
 }
 
 

@@ -35,7 +35,7 @@
     font-size: 20px;
 }
 
-#history{
+#history {
     outline: 0;
     border: 0;
     width: 60px;
@@ -48,7 +48,8 @@
     cursor: pointer;
     font-size: 20px;
 }
-#history-icon{
+
+#history-icon {
     position: absolute;
 }
 
@@ -61,17 +62,19 @@
     background-color: #adadad;
 }
 
-.display-container{
+.display-container {
     text-align: center;
     color: white;
     font-size: 15px;
 }
-.display-box{
+
+.display-box {
     display: flex;
     justify-content: end;
-    
+
 }
-.display-container p{
+
+.display-container p {
     background-color: #3c4654;
     font-size: 21px;
     text-align: start;
@@ -79,7 +82,7 @@
 
 }
 
-#display1{
+#current-number {
     box-shadow: none;
     font-size: 42px;
     text-align: right;
@@ -87,7 +90,8 @@
     margin: 0px;
     color: #473e3e
 }
-#operator-sec{
+
+#operator-sec {
     box-shadow: none;
     font-size: 20px;
     /* text-align: right; */
@@ -95,7 +99,8 @@
     margin: 0px;
     color: #473e3e;
 }
-#display3{
+
+#previous-number {
     box-shadow: none;
     font-size: 20px;
     text-align: right;
@@ -115,3 +120,18 @@
 #btn {
     width: 60px;
 }
+
+#icon-box {
+    position: relative;
+    display: inline;
+    color: #3a4452;
+}
+
+#history-icon {
+    position: absolute;
+    top: 0;
+    right: 40%;
+    color: white;
+
+}
+
